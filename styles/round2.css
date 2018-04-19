@@ -1,0 +1,157 @@
+/* ROUND 2 */
+html { font: normal normal 16px/1.2 courier, monospace; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: #000;
+  color: rgb(255, 0, 255);
+  overflow: hidden;
+}
+
+.example {
+  background: rgb(0, 255, 255);
+  font-size: 2rem;
+  margin: 42vh auto 0;
+  text-align: center;
+  transition: all 1s ease-in-out;
+
+  line-height: 16vh;
+  height: 16vh;
+  width: 16vh;
+}
+
+.example:hover {
+  background: rgb(255, 0, 255);
+  border-radius: 50%;
+  color: rgb(0, 255, 255);
+  animation: 5s ease 0s infinite pulse;
+}
+
+.circles {
+  position: absolute;
+  top: 0; right: 0; left: 0; bottom: 0;
+  margin: auto;
+  transform-origin: center;
+  z-index: -1;
+}
+
+.circles li {
+  display: block;
+  border-radius: 50%;
+  font-size: 0;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+
+  width: 8vh;
+  height: 8vh;
+
+  position: absolute;
+  top: 0; right: 0; left: 0; bottom: 0;
+  margin: auto;
+
+}
+
+.circles li:nth-of-type(1n) { background-color: #29724B; transition-delay: 0s;}
+.circles li:nth-of-type(2n) { background-color: #9D1361; transition-delay: 0.1s;}
+.circles li:nth-of-type(3n) { background-color: #64186F; transition-delay: 0.2s;}
+.circles li:nth-of-type(4n) { background-color: #AA8E22; transition-delay: 0.3s;}
+.circles li:nth-of-type(5n) { background-color: #18586A; transition-delay: 0.4s;}
+
+.example:hover + .circles li:nth-of-type(1) {
+  transform: rotate(0deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(2) {
+  transform: rotate(18deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(3) {
+  transform: rotate(36deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(4) {
+  transform: rotate(54deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(5) {
+  transform: rotate(72deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(6) {
+  transform: rotate(90deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(7) {
+  transform: rotate(108deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(8) {
+  transform: rotate(126deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(9) {
+  transform: rotate(144deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(10) {
+  transform: rotate(162deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(11) {
+  transform: rotate(180deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(12) {
+  transform: rotate(198deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(13) {
+  transform: rotate(216deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(14) {
+  transform: rotate(234deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(15) {
+  transform: rotate(252deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(16) {
+  transform: rotate(270deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(17) {
+  transform: rotate(288deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(18) {
+  transform: rotate(306deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(19) {
+  transform: rotate(324deg) translate(40vh);
+}
+
+.example:hover + .circles li:nth-of-type(20) {
+  transform: rotate(342deg) translate(40vh);
+}
+
+.example:hover + .circles {
+  animation: 10s linear 0s infinite revolve;
+}
+
+.example:hover + .circles li {
+  opacity: 1;
+}
+
+@keyframes revolve {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgb(255, 255, 0); }
+  50% { box-shadow: 0 0 100vh rgb(255, 255, 0); }
+  100% { box-shadow: 0 0 0 rgb(255, 255, 0); }
+}

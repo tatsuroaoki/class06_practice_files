@@ -1,0 +1,37 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #FFF;
+  font-size: 2rem;
+}
+
+#mixed-circles,
+#circles {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50vh auto 0;
+  list-style: none;
+  transform: translateY(-50%);
+  width: 50vmax;
+}
+
+#mixed-circles em,
+#mixed-circles strong,
+#circles li {
+  background: rgb(255, 255, 0);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 10vmax;
+
+  height: 10vmax;
+  width: 10vmax;
+}
+
+/* this is the highlight style */
+#circles :nth-child() {
+  background: rgb(0, 255, 255);
+}
+
+/* also a highlight style */
+#mixed-circles em:nth-of-type() {
+  background: rgb(0, 255, 255);
+}

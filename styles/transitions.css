@@ -1,0 +1,82 @@
+html { font: normal normal 16px/1.2 courier, monospace; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: #000;
+  color: rgb(255, 0, 255);
+}
+
+main {
+  border-bottom: 0.5rem dashed #333;
+  height: 40vh;
+  margin: 0 auto;
+  position: relative;
+  width: 90vw;
+
+}
+
+.example {
+  background: rgb(0, 255, 255);
+  font-size: 2rem;
+  margin: 0 auto;
+  text-align: center;
+
+  height: 15vmin;
+  line-height: 15vmin;
+  width: 15vmin;
+
+  position: absolute;
+  bottom: 1%;
+  left: 10%;
+
+  /* Here's the Magic! */
+  /*transition: all 1s ease 0s;*/
+}
+
+/* INTRO TO TRANSITIONS */
+.example:hover {
+  /*background: rgb(255, 0, 255);*/
+  /*border-radius: 50%;*/
+  /*color: rgb(0, 255, 255);*/
+
+  /* SIZE CHANGES*/
+  /*height: 20vmin; width: 20vmin;*/
+
+  /* POSITION */
+  /*left: 40%;*/
+
+   /*TRANSFORMATIONS */
+  /*transform: rotate(360deg);*/
+  /*transform: rotate3d(1, 1, 1, 360deg);*/
+}
+
+/* KEYFRAME ANIMATIONS */
+.example:hover {
+  /*animation: 1s ease-out 0s infinite pulse;*/
+}
+
+.example {
+  /*animation: walk 0.5s linear 0s infinite alternate,
+             move 6s linear 0.5s infinite alternate;*/
+}
+
+@keyframes move {
+  0% { left: 20%; bottom: 1%; }
+  100% { left: 80%; bottom: 1%; }
+}
+
+@keyframes walk {
+  from {
+    transform: rotate(-7deg);
+  }
+
+  to {
+    transform: rotate(7deg);
+  }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgb(253, 254, 0); }
+  50% { box-shadow: 0 0 5rem rgb(253, 254, 0); }
+  100% { box-shadow: 0 0 0 rgb(253, 254, 0); }
+}
